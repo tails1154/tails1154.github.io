@@ -1,0 +1,37 @@
+{
+    entry = {
+        bundle = "BlueSkyNotify.bundle";
+        cell = PSLinkCell;
+        detail = "BlueSkyNotifyListController";
+        isController = 1;
+        label = "BlueSky Notifications";
+    };
+    title = "BlueSky Notifications";
+    strings = "BlueSkyNotify";
+    specifiers = (
+        {
+            cell = PSGroupCell;
+            footerText = "Use your handle and a Bluesky App Password. Your main account password will not work.";
+        },
+        {
+            key = handle;
+            label = "Handle";
+            cell = PSEditTextCell;
+            default = "";
+            placeholder = "you.bsky.social";
+        },
+        {
+            key = appPassword;
+            label = "App Password";
+            cell = PSEditTextCell;
+            isSecure = 1;
+            default = "";
+        },
+        {
+            key = showStatus;
+            label = "Show Launch Status";
+            cell = PSSwitchCell;
+            default = 1;
+        }
+    );
+}
