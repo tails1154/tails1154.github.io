@@ -16,6 +16,13 @@ BlueSkyNotifyPrefs_PRIVATE_FRAMEWORKS = Preferences
 BlueSkyNotifyPrefs_RESOURCE_DIRS = Preferences/Resources
 BlueSkyNotifyPrefs_INSTALL_PATH = /Library/PreferenceBundles
 
+APPLICATION_NAME = BlueSkyNotifierSettings
+BlueSkyNotifierSettings_FILES = Settings/main.m Settings/BSSettingsAppDelegate.m Settings/BSSettingsViewController.m
+BlueSkyNotifierSettings_FRAMEWORKS = UIKit Foundation
+BlueSkyNotifierSettings_RESOURCE_FILES = Settings/Info.plist
+BlueSkyNotifierSettings_INSTALL_PATH = /Applications
+
 include $(THEOS)/makefiles/common.mk
 include $(THEOS)/makefiles/tweak.mk
 include $(THEOS)/makefiles/bundle.mk
+include $(THEOS)/makefiles/application.mk
