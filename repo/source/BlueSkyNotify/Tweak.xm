@@ -7,6 +7,18 @@ static NSInteger BSLastUnreadCount = -1;
 static BOOL BSLoggingIn;
 static BOOL BSConnectionReported;
 static BOOL BSLoginStatusReported;
+static void BSSendStatus(NSString *title, NSString *message);
+
+%hook PSListController
+- (void)saveSettings:(id)specifier {
+    CFPreferencesAppSynchronize(CFSTR("com.tails1154.bluesky.notify"));
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Saved" message:@"BlueSkyNotifier settings saved." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+}
+- (void)sendTestNotification:(id)specifier {
+    BSSendStatus(@"BlueSkyNotifier", @"Test notification succeeded.");
+}
+%end
 
 static BOOL BSStatusEnabled(void) {
     NSDictionary *prefs = [NSDictionary dictionaryWithContentsOfFile:@"/var/mobile/Library/Preferences/com.tails1154.bluesky.notify.plist"];
@@ -117,6 +129,8 @@ static void BSPollUnreadNotifications(void) {
 }
 
 %ctor {
+    NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
+    if (![bundleID isEqualToString:@"com.apple.springboard"]) return;
     BSSendStatus(@"BlueSkyNotifier", @"Loaded BlueSkyNotifier.");
     BSNotifyTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 target:[NSBlockOperation blockOperationWithBlock:^{ BSPollUnreadNotifications(); }] selector:@selector(main) userInfo:nil repeats:YES];
     BSPollUnreadNotifications();
