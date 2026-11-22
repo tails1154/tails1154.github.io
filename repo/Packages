@@ -26,13 +26,13 @@ SHA256: 66f5caaafaf811fa3582846a4c38ec93354a1cbc42dbdb25659278036c97a378
 
 Package: com.tails1154.bluesky.notify
 Name: BlueSky Notification Monitor
-Version: 1.8
+Version: 1.9
 Architecture: iphoneos-arm
 Description: Polls Bluesky unread notifications and displays SpringBoard alerts.
 Maintainer: tails1154
 Section: Tweaks
 Depends: mobilesubstrate
-Filename: ./debs/com.tails1154.bluesky.notify_1.8_iphoneos-arm.deb
-Size: 8312
-MD5sum: 8ad7b4fbd1c5786ac26ace86fbef18e7
-SHA256: 1e29689d1d325b599a3d52742cff6cbe530149cdf157146ad20cd7a55cc467dd
+Filename: ./debs/com.tails1154.bluesky.notify_1.9_iphoneos-arm.deb
+Size: 8316
+MD5sum: 6bd7a7c9317f438e9ebdc34c05acef0c
+SHA256: 8bdc1e80d6cfff762cecbe54261afe7adfb54f9c28282344b74310b89024eb46
