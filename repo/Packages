@@ -11,3 +11,16 @@ Size: 5574
 MD5sum: e7b67c0ce7f5f207968c1d4e9b250791
 SHA256: 1ac190add2280a3be65a0066389e7f5fe4db1c943b44861ef2d873ee58655c33
 
+Package: com.iprogramincpp.purplecord
+Name: Purplecord
+Version: 0.1.2
+Architecture: iphoneos-arm
+Description: A Discord client for iOS 3+.
+Maintainer: iProgramInCpp
+Author: iProgramInCpp
+Section: Messaging
+Filename: ./debs/com.iprogramincpp.purplecord_0.1.2_iphoneos-armv7.deb
+Size: 1409438
+MD5sum: 7710c2c91efda76a07ff0569a08ae281
+SHA256: 739bfbd56d9b4e00e6ddad2b7e9dab494019b2f07a46ced67596f44cd539dbd8
+
