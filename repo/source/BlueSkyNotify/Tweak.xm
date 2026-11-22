@@ -19,7 +19,13 @@ static void BSSendStatus(NSString *title, NSString *message) {
     Class serverClass = NSClassFromString(@"BBServer");
     Class bulletinClass = NSClassFromString(@"BBBulletin");
     if (!serverClass || !bulletinClass) return;
-    id server = [[[serverClass alloc] init] autorelease];
+    id server = nil;
+    NSArray *serverSelectors = [NSArray arrayWithObjects:@"sharedInstance", @"sharedServer", @"defaultServer", nil];
+    for (NSString *name in serverSelectors) {
+        SEL selector = NSSelectorFromString(name);
+        if ([serverClass respondsToSelector:selector]) { id (*getServer)(id, SEL) = (id (*)(id, SEL))objc_msgSend; server = getServer(serverClass, selector); if (server) break; }
+    }
+    if (!server) server = [[[serverClass alloc] init] autorelease];
     id bulletin = [[[bulletinClass alloc] init] autorelease];
     [bulletin setValue:title forKey:@"title"];
     [bulletin setValue:message forKey:@"message"];
@@ -69,7 +75,13 @@ static void BSSendSpringBoardAlert(NSInteger unreadCount) {
     Class serverClass = NSClassFromString(@"BBServer");
     Class bulletinClass = NSClassFromString(@"BBBulletin");
     if (!serverClass || !bulletinClass) return;
-    id server = [[[serverClass alloc] init] autorelease];
+    id server = nil;
+    NSArray *serverSelectors = [NSArray arrayWithObjects:@"sharedInstance", @"sharedServer", @"defaultServer", nil];
+    for (NSString *name in serverSelectors) {
+        SEL selector = NSSelectorFromString(name);
+        if ([serverClass respondsToSelector:selector]) { id (*getServer)(id, SEL) = (id (*)(id, SEL))objc_msgSend; server = getServer(serverClass, selector); if (server) break; }
+    }
+    if (!server) server = [[[serverClass alloc] init] autorelease];
     id bulletin = [[[bulletinClass alloc] init] autorelease];
     [bulletin setValue:@"Bluesky" forKey:@"title"];
     [bulletin setValue:(unreadCount == 1 ? @"You have 1 new notification." : [NSString stringWithFormat:@"You have %ld new notifications.", (long)unreadCount]) forKey:@"message"];
