@@ -1,0 +1,8 @@
+Origin: Tails1154
+Label: Tails1154's Repository
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm
+Components: main
+Description: Tails1154's jailbreak repository for legacy iOS software.
