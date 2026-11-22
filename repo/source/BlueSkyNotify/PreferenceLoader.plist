@@ -31,12 +31,12 @@
             label = "Show Launch Status";
         },
         {
-            action = "saveSettings:";
+            buttonAction = "saveSettings:";
             cell = PSButtonCell;
             label = "Save Settings";
         },
         {
-            action = "sendTestNotification:";
+            buttonAction = "sendTestNotification:";
             cell = PSButtonCell;
             label = "Send Test Notification";
         }
