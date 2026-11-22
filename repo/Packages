@@ -7,7 +7,7 @@ Maintainer: tails1154
 Section: Tweaks
 Depends: mobilesubstrate
 Filename: ./debs/com.tails1154.bluesky.notify_1.0_iphoneos-arm.deb
-Size: 5540
-MD5sum: 96f5af1bc6c1ebacf055325a3ae2de63
-SHA256: 478180c0e8ec28339423f3a607cd87f8c46249d4f43f6f1648133d743a9b1d76
+Size: 5566
+MD5sum: 97f9b1f588bc1d9d7092125e1ddd882c
+SHA256: eb8a04344967d715b4090d12bbdfaf2d919128280ef4a7846f7662f41363b489
 
