@@ -24,3 +24,15 @@ Size: 1409438
 MD5sum: 7710c2c91efda76a07ff0569a08ae281
 SHA256: 739bfbd56d9b4e00e6ddad2b7e9dab494019b2f07a46ced67596f44cd539dbd8
 
+Package: dev.preloading.tubereplacer
+Name: TubeReplacer
+Version: 2.0.2
+Architecture: iphoneos-arm
+Description: A fix for YouTube with sign-in.
+Maintainer: Preloading <me@preloading.dev>
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 5.0), firmware (<< 11.0)
+Filename: ./debs/dev.preloading.tubereplacer_2.0.2_iphoneos-arm.deb
+Size: 758982
+MD5sum: 056de9e31d48ed4ae4c8bad7754da9fc
+SHA256: 66f5caaafaf811fa3582846a4c38ec93354a1cbc42dbdb25659278036c97a378
