@@ -1,16 +1,3 @@
-Package: com.tails1154.bluesky.notify
-Name: BlueSky Notification Monitor
-Version: 1.1
-Architecture: iphoneos-arm
-Description: Polls Bluesky unread notifications and displays SpringBoard alerts.
-Maintainer: tails1154
-Section: Tweaks
-Depends: mobilesubstrate
-Filename: ./debs/com.tails1154.bluesky.notify_1.1_iphoneos-arm.deb
-Size: 5574
-MD5sum: e7b67c0ce7f5f207968c1d4e9b250791
-SHA256: 1ac190add2280a3be65a0066389e7f5fe4db1c943b44861ef2d873ee58655c33
-
 Package: com.iprogramincpp.purplecord
 Name: Purplecord
 Version: 0.1.2
@@ -36,3 +23,16 @@ Filename: ./debs/dev.preloading.tubereplacer_2.0.2_iphoneos-arm.deb
 Size: 758982
 MD5sum: 056de9e31d48ed4ae4c8bad7754da9fc
 SHA256: 66f5caaafaf811fa3582846a4c38ec93354a1cbc42dbdb25659278036c97a378
+
+Package: com.tails1154.bluesky.notify
+Name: BlueSky Notification Monitor
+Version: 1.2
+Architecture: iphoneos-arm
+Description: Polls Bluesky unread notifications and displays SpringBoard alerts.
+Maintainer: tails1154
+Section: Tweaks
+Depends: mobilesubstrate
+Filename: ./debs/com.tails1154.bluesky.notify_1.2_iphoneos-arm.deb
+Size: 5786
+MD5sum: e40c5fbeb0cfec20aed060f8c68d8557
+SHA256: 6f21e1227200421bd6b44116ecfc5692629ba474392f5328dd4b4d60599a2466
