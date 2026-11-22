@@ -7,4 +7,5 @@
 <dict><key>cell</key><string>PSEditTextCell</string><key>defaults</key><string>com.tails1154.bluesky.notify</string><key>key</key><string>handle</string><key>label</key><string>Handle</string><key>placeholder</key><string>you.bsky.social</string></dict>
 <dict><key>cell</key><string>PSEditTextCell</string><key>defaults</key><string>com.tails1154.bluesky.notify</string><key>key</key><string>appPassword</string><key>label</key><string>App Password</string><key>isSecure</key><true/></dict>
 <dict><key>cell</key><string>PSSwitchCell</string><key>defaults</key><string>com.tails1154.bluesky.notify</string><key>key</key><string>showStatus</string><key>label</key><string>Show Launch Status</string><key>default</key><true/></dict>
+<dict><key>cell</key><string>PSButtonCell</string><key>label</key><string>Save Settings</string><key>action</key><string>saveSettings:</string></dict>
 </array></dict></plist>
