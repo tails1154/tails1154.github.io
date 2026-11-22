@@ -1,6 +1,6 @@
 # Tails1154 Repo
 
-Add this URL to Cydia or Sileo:
+Add this URL to Cydia:
 
 `https://tails1154.github.io/repo/`
 
