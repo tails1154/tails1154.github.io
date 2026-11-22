@@ -1,9 +1,44 @@
 {
     entry = {
-        bundle = "BlueSkyNotify.bundle";
         cell = PSLinkCell;
-        detail = "BlueSkyNotifyRootListController";
-        isController = 1;
         label = "BlueSky Notifications";
     };
+    title = "BlueSky Notifications";
+    items = (
+        {
+            cell = PSGroupCell;
+            footerText = "Use a Bluesky App Password, not your main password.";
+        },
+        {
+            cell = PSEditTextCell;
+            defaults = "com.tails1154.bluesky.notify";
+            key = handle;
+            label = "Handle";
+            placeholder = "you.bsky.social";
+        },
+        {
+            cell = PSEditTextCell;
+            defaults = "com.tails1154.bluesky.notify";
+            isSecure = 1;
+            key = appPassword;
+            label = "App Password";
+        },
+        {
+            cell = PSSwitchCell;
+            defaults = "com.tails1154.bluesky.notify";
+            default = 1;
+            key = showStatus;
+            label = "Show Launch Status";
+        },
+        {
+            action = "saveSettings:";
+            cell = PSButtonCell;
+            label = "Save Settings";
+        },
+        {
+            action = "sendTestNotification:";
+            cell = PSButtonCell;
+            label = "Send Test Notification";
+        }
+    );
 }
