@@ -1,6 +1,6 @@
 Package: com.tails1154.bluesky.notify
 Name: BlueSky Notification Monitor
-Version: 1.6
+Version: 1.7
 Architecture: iphoneos-arm
 Description: Polls Bluesky unread notifications and displays SpringBoard alerts.
 Maintainer: tails1154
